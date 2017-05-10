@@ -11,6 +11,7 @@ A basic exmaple of using Varant, Ansible and Docker
 ## How to run 
 - clone this repo
 - run "vagrant up"
+
 This will configure a VirtualBox VM (default IP address is 10.1.1.100. This, along with memory an vcpu count can be changed by editing VagrantFile)
 
 
