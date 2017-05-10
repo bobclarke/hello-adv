@@ -26,6 +26,9 @@
     state: latest
   notify: Restart Docker
 
+- name: flush handlers
+  meta: flush_handlers
+
 - name: Install Pip
   yum:
     update_cache: yes
