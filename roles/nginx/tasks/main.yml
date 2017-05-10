@@ -14,5 +14,5 @@
   docker:
     name: hello-adv-nginx-container
     image: "hello-adv-nginx-image:v1"
-    command: rc-service nginx start
-    publish_all_ports: yes
+    ports: 
+      - 80:80
