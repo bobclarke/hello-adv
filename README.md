@@ -9,8 +9,9 @@ A basic exmaple of using Varant, Ansible and Docker
 - An internet connection :)
 
 ## How to run 
-- clone this repo
-- run "vagrant up"
+On the host OS, run the following commands:
+- git clone git@github.com:bobclarke/hello-adv.git && cd hello-adv
+- vagrant up
 
 The resultant VirtualBox VM will have an IP address of 10.1.1.100 and a hostname of jupiter. 
 (This, along with memory an vcpu count can be changed by editing VagrantFile)
