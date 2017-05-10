@@ -25,6 +25,9 @@ RUN sed -i 's/mount -t tmpfs/# mount -t tmpfs/g' /lib/rc/sh/init.sh
 # can't do cgroups
 RUN sed -i 's/cgroup_add_service /# cgroup_add_service /g' /lib/rc/sh/openrc-run.sh
 
+# Not sure why I need to do this, but openrc won't start nginx without it
+touch /run/openrc/softlevel
+
 # clean apk cache
 RUN rm -rf /var/cache/apk/*
 
@@ -35,5 +38,4 @@ RUN apk add --update nginx
 EXPOSE 80
 COPY nginx.conf /etc/nginx/nginx.conf
 
-#CMD ["/sbin/init"]
-CMD ["/usr/sbin/nginx"]
+CMD ["/sbin/init"]
