@@ -31,3 +31,8 @@
     update_cache: yes
     name: python-pip
     state: latest
+
+- name: Install docker-py
+  shell: 'pip install docker-py'
+  args:
+    executable: /bin/bash
