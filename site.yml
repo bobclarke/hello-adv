@@ -1,0 +1,11 @@
+---
+# ansible-playbook --inventory hosts site.yml
+
+- name: Common Playbook
+  hosts: all
+  become: true
+  become_user: root
+  become_method: sudo
+
+  roles:
+  - { role: common, tags: "common" }

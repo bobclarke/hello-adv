@@ -1,0 +1,33 @@
+---
+
+- name: Create file for Docker repo
+  command: touch -f /etc/yum.repos.d/docker.repo
+
+- name: Add docker repo details
+  lineinfile: 
+    dest: /etc/yum.repos.d/docker.repo 
+    line: "{{ item }}"
+  with_items:
+    - "[dockerrepo]"
+    - name=Docker Repository
+    - baseurl=https://yum.dockerproject.org/repo/main/centos/7/
+    - enabled=1
+    - gpgcheck=0
+
+- name: Install Epel
+  yum:
+    name: epel-release
+    state: latest
+
+- name: Install Docker Engine
+  yum:
+    update_cache: yes
+    name: docker-engine
+    state: latest
+  notify: Restart Docker
+
+- name: Install Pip
+  yum:
+    update_cache: yes
+    name: python-pip
+    state: latest

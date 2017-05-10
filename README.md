@@ -1,3 +1,1 @@
-# hello-adv
-# Hello Ansible Docker and Vagrant 
-A simple example 
+# Hello Ansible Docker Vagrant
