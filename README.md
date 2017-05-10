@@ -10,7 +10,7 @@ A basic exmaple of using Varant, Ansible and Docker
 
 ## How to run 
 On the host OS, run the following commands:
-- git clone git@github.com:bobclarke/hello-adv.git && cd hello-adv
+- git clone https://github.com/bobclarke/hello-adv.git && cd hello-adv
 - vagrant up
 
 The resultant VirtualBox VM will have an IP address of 10.1.1.100 and a hostname of jupiter. 
