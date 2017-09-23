@@ -1,17 +1,17 @@
 ---
 
 - name: upload build files   
-  synchronize: src=docker-build dest=/tmp
+  synchronize: src=docker-build dest=/tmp/nginx
 
 - name: build nginx docker image
   docker_image:
     name: hello-adv-nginx-image
     tag: v1
-    path: /tmp/docker-build
+    path: /tmp/nginx/docker-build
     state: present
 
 - name: run nginx docker container
-  docker:
+  docker_container:
     name: hello-adv-nginx-container
     image: "hello-adv-nginx-image:v1"
     ports: 
