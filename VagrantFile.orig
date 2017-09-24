@@ -1,0 +1,26 @@
+Vagrant.configure(2) do |config|
+
+	config.vm.box_check_update = false
+	config.vm.box = "centos/7"
+
+  config.vm.define "jupiter" do |jupiter|
+
+    jupiter.vm.hostname = "jupiter"
+    jupiter.vm.network "private_network", ip: "10.1.1.100"
+
+		jupiter.vm.provider "virtualbox" do |vb|
+			vb.memory = "1024"
+		end
+
+    jupiter.vm.provision "ansible" do |ansible|
+      ansible.verbose = "v"
+      ansible.playbook = "site.yml"
+    end
+
+  end
+
+end
+
+
+
+
