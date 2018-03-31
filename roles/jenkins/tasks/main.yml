@@ -1,0 +1,18 @@
+---
+
+- name: upload build files   
+  synchronize: src=docker-build dest=/tmp/jenkins
+
+- name: build jenkins docker image
+  docker_image:
+    name: hello-adv-jenkins-image
+    tag: v1
+    path: /tmp/jenkins/docker-build
+    state: present
+
+- name: run jenkins docker container
+  docker_container:
+    name: hello-adv-jenkins-container
+    image: "hello-adv-jenkins-image:v1"
+    ports: 
+      - 8080:8080
