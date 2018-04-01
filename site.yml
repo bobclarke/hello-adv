@@ -8,6 +8,7 @@
 
   roles:
   - { role: common, tags: "common" }
+  - { role: nginx, tags: "nginx" }
   - { role: jenkins, tags: "jenkins" }
 
 - hosts: deploy

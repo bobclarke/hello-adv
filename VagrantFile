@@ -13,9 +13,13 @@ Vagrant.configure(2) do |config|
 		end
 
     box.vm.provision "ansible" do |ansible|
-      ansible.verbose = "v"
+      ansible.verbose = "vvv"
+      ansible.inventory_path = "./hosts"
       ansible.playbook = "site.yml"
+      ansible.host_key_checking = false
     end
+
+  end
 
   config.vm.define "neptune" do |box|
 
@@ -27,8 +31,10 @@ Vagrant.configure(2) do |config|
 		end
 
     box.vm.provision "ansible" do |ansible|
-      ansible.verbose = "v"
+      ansible.verbose = "vvv"
+      ansible.inventory_path = "./hosts"
       ansible.playbook = "site.yml"
+      ansible.host_key_checking = false
     end
 
   end

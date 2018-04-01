@@ -1,5 +1,5 @@
 [ci]
-jupiter
+jupiter ansible_host=10.1.1.20
 
 [deploy]
-neptune
+neptune ansible_host=10.1.1.30
