@@ -1,2 +1,0 @@
-[all]
-jupiter ansible_host=10.1.1.100 ansible_ssh_private_key_file='/Users/clarkeb/vagrant/test/.vagrant/machines/jupiter/virtualbox/private_key'

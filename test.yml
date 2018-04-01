@@ -1,8 +1,7 @@
 ---
 # ansible-playbook --inventory hosts site.yml
+
 - hosts: all
-  environment:
-    PYTHONPATH: "/Library/Python/2.7/site-packages"
   become: true
   become_user: root
   become_method: sudo
@@ -10,3 +9,4 @@
 
   roles:
   - jenkins
+

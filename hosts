@@ -1,5 +1,2 @@
-[ci]
-jupiter ansible_host=10.1.1.20
-
-[deploy]
-neptune ansible_host=10.1.1.30
+[all]
+jupiter ansible_host=10.1.1.20 ansible_ssh_private_key_file='/Users/bclar6/git/hello-adv/.vagrant/machines/jupiter/virtualbox/private_key'

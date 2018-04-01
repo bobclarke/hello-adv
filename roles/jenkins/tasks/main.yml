@@ -1,7 +1,9 @@
 ---
-
-- name: upload build files   
-  synchronize: src=docker-build dest=/tmp/jenkins
+- name: upload jenkins build files
+  copy:
+    src: docker-build
+    dest: /tmp/jenkins
+    directory_mode: yes
 
 - name: build jenkins docker image
   docker_image:

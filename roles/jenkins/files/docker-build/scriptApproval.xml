@@ -1,0 +1,13 @@
+<scriptApproval plugin="script-security@1.41">
+  <approvedScriptHashes/>
+  <approvedSignatures>
+	<string>method groovy.json.JsonSlurperClassic parseText java.lang.String</string>
+	<string>new groovy.json.JsonSlurperClassic</string>
+	<string>staticMethod java.lang.System exit int</string>
+  </approvedSignatures>
+  <aclApprovedSignatures/>
+  <approvedClasspathEntries/>
+  <pendingScripts/>
+  <pendingSignatures/>
+  <pendingClasspathEntries/>
+</scriptApproval>
