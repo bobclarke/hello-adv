@@ -8,6 +8,7 @@ A basic exmaple of using Varant, Ansible and Docker
 - Git (any version should be fine)
 - An internet connection :)
 
+
 ## How to run 
 On the host OS, run the following commands:
 - git clone https://github.com/bobclarke/hello-adv.git && cd hello-adv
